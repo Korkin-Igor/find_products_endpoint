@@ -17,7 +17,7 @@ return new class extends Migration
             $table->decimal('price', 8, 2)->default(0);
             $table->foreignId('category_id')->constrained(); // set up FK and index
             $table->boolean('in_stock')->default(true);
-            $table->smallInteger('rating')->nullable();
+            $table->float('rating', 1, 2);
             $table->timestamps();
         });
     }
